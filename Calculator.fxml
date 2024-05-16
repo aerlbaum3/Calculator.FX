@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.*?>
+
+<?import javafx.geometry.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+
+	xmlns:fx="http://javafx.com/fxml"
+
+	fx:controller="application.CalculatorController"
+
+	stylesheets="@application.css" alignment="CENTER">
+
+	<AnchorPane VBox.vgrow="ALWAYS"
+		style="-fx-background-color: #ADD8E6">
+
+		<children>
+
+			<!-- Label to display calculator input and result -->
+
+			<Label fx:id="display" AnchorPane.topAnchor="10"
+				AnchorPane.leftAnchor="10" text="0" />
+
+			<GridPane vgap="5" hgap="5" AnchorPane.topAnchor="50"
+				AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10"
+				AnchorPane.bottomAnchor="10">
+
+				<!-- Define column and row constraints for the GridPane -->
+
+				<columnConstraints>
+
+					<ColumnConstraints percentWidth="25" />
+
+					<ColumnConstraints percentWidth="25" />
+
+					<ColumnConstraints percentWidth="25" />
+
+					<ColumnConstraints percentWidth="25" />
+
+				</columnConstraints>
+
+				<rowConstraints>
+					<RowConstraints percentHeight="20" />
+								
+					<RowConstraints percentHeight="20" />
+
+					<RowConstraints percentHeight="20" />
+
+					<RowConstraints percentHeight="20" />
+
+					<RowConstraints percentHeight="20" />
+
+				</rowConstraints>
+
+				<!-- Buttons for numbers and operators, with corresponding actions -->
+
+				<Button text="7" onAction="#clickOnNumbers"
+					GridPane.columnIndex="0" GridPane.rowIndex="0"
+					styleClass="calculator-button" />
+
+				<Button text="8" onAction="#clickOnNumbers"
+					GridPane.columnIndex="1" GridPane.rowIndex="0"
+					styleClass="calculator-button" />
+
+				<Button text="9" onAction="#clickOnNumbers"
+					GridPane.columnIndex="2" GridPane.rowIndex="0"
+					styleClass="calculator-button" />
+
+				<Button text="+" onAction="#clickOnOperator"
+					GridPane.columnIndex="3" GridPane.rowIndex="0"
+					styleClass="calculator-button" />
+
+				<Button text="4" onAction="#clickOnNumbers"
+					GridPane.columnIndex="0" GridPane.rowIndex="1"
+					styleClass="calculator-button" />
+
+				<Button text="5" onAction="#clickOnNumbers"
+					GridPane.columnIndex="1" GridPane.rowIndex="1"
+					styleClass="calculator-button" />
+
+				<Button text="6" onAction="#clickOnNumbers"
+					GridPane.columnIndex="2" GridPane.rowIndex="1"
+					styleClass="calculator-button" />
+
+				<Button text="-" onAction="#clickOnOperator"
+					GridPane.columnIndex="3" GridPane.rowIndex="1"
+					styleClass="calculator-button" />
+
+				<Button text="1" onAction="#clickOnNumbers"
+					GridPane.columnIndex="0" GridPane.rowIndex="2"
+					styleClass="calculator-button" />
+
+				<Button text="2" onAction="#clickOnNumbers"
+					GridPane.columnIndex="1" GridPane.rowIndex="2"
+					styleClass="calculator-button" />
+
+				<Button text="3" onAction="#clickOnNumbers"
+					GridPane.columnIndex="2" GridPane.rowIndex="2"
+					styleClass="calculator-button" />
+
+				<Button text="*" onAction="#clickOnOperator"
+					GridPane.columnIndex="3" GridPane.rowIndex="2"
+					styleClass="calculator-button" />
+
+				<Button text="C" onAction="#clickOnClearOperator"
+					GridPane.columnIndex="0" GridPane.rowIndex="3"
+					styleClass="calculator-button" />
+
+				<Button text="0" onAction="#clickOnNumbers"
+					GridPane.columnIndex="1" GridPane.rowIndex="3"
+					styleClass="calculator-button" />
+
+				<Button text="=" onAction="#clickOnEqualsOperator"
+					GridPane.columnIndex="2" GridPane.rowIndex="3"
+					styleClass="calculator-button" />
+
+				<Button text="/" onAction="#clickOnOperator"
+					GridPane.columnIndex="3" GridPane.rowIndex="3"
+					styleClass="calculator-button" />
+
+			</GridPane>
+
+		</children>
+
+	</AnchorPane>
+
+</VBox>
